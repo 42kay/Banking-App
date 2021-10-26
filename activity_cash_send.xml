@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CashSendActivity">
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recipient Name:"
+        tools:layout_editor_absoluteX="22dp"
+        tools:layout_editor_absoluteY="157dp" />
+
+    <EditText
+        android:id="@+id/etPin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_security"
+        android:ems="10"
+        android:inputType="numberPassword"
+        tools:layout_editor_absoluteX="100dp"
+        tools:layout_editor_absoluteY="488dp" />
+
+    <EditText
+        android:id="@+id/etRname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_person_outline"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        tools:layout_editor_absoluteX="100dp"
+        tools:layout_editor_absoluteY="196dp" />
+
+    <EditText
+        android:id="@+id/etCell"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_baseline_settings_cell"
+        android:ems="10"
+        android:inputType="phone"
+        android:text="Cellphone No."
+        tools:layout_editor_absoluteX="100dp"
+        tools:layout_editor_absoluteY="380dp" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create 5-digit access code:"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="451dp" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="337dp"
+        android:layout_height="54dp"
+        android:text="Cash Send"
+        android:textAlignment="center"
+        android:textColor="#FD9727"
+        android:textSize="27sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="37dp"
+        tools:layout_editor_absoluteY="-12dp" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recipient Cellphone No.:"
+        tools:layout_editor_absoluteX="22dp"
+        tools:layout_editor_absoluteY="347dp" />
+
+    <Button
+        android:id="@+id/btnSend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FD9727"
+        android:text="Send"
+        tools:layout_editor_absoluteX="161dp"
+        tools:layout_editor_absoluteY="564dp" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Amount:"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="259dp" />
+
+    <EditText
+        android:id="@+id/etMoney"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Rand"
+        android:inputType="numberDecimal"
+        tools:layout_editor_absoluteX="104dp"
+        tools:layout_editor_absoluteY="283dp" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:text="R"
+        android:textColor="#0B0B0B"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="80dp"
+        tools:layout_editor_absoluteY="294dp" />
+
+    <TextView
+        android:id="@+id/Back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        tools:layout_editor_absoluteX="14dp"
+        tools:layout_editor_absoluteY="690dp" />
+
+</android.support.constraint.ConstraintLayout>
