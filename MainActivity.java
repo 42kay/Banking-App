@@ -1,105 +1,39 @@
- package com.example.demo;
+package com.example.paysomeonenew;
 
-import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 import android.widget.Toast;
 
- public class MainActivity extends AppCompatActivity {
-
-    private EditText eName;
-    private  EditText ePassword;
-    private Button eLogin;
-    private TextView eAttemptsInfo;
-
-    private final String Username="Admin";
-     private  final String Password="admin1234";
-
-     boolean isValid =false;
-
-     private int counter =5;
-     TextView CreateNewAccount;
-     TextView ForgotPassword;
-
-
-
+public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        eName= findViewById(R.id.inputUserName);
-        ePassword=findViewById(R.id.inputPassword);
-        eLogin=findViewById(R.id.btnLogin);
-        eAttemptsInfo=findViewById(R.id.tvAttemptsinfo);
-        CreateNewAccount=findViewById(R.id.CreateNewAccount);
-        ForgotPassword=findViewById(R.id.etForgotPassword);
-
-        CreateNewAccount.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,SignUpActivity.class));
-
-            }
-        });
-        ForgotPassword.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,ForgotPasswordActivity2.class));
-
-            }
-        });
-
-        eLogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        Spinner spinner =findViewById(R.id.spinner1);
+        ArrayAdapter<CharSequence> adapter =ArrayAdapter.createFromResource(this,R.array.banks,android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(adapter);
+        spinner.setOnItemSelectedListener(this);
 
 
-                String inputName=eName.getText().toString();
-                String inputPassword=ePassword.getText().toString();
-
-                if(inputName.isEmpty()|| inputPassword.isEmpty())
-                {
-                            Toast.makeText( MainActivity.this , "Please enter all the details correctly!",Toast.LENGTH_SHORT).show();
-            }else{
-                    isValid =validate(inputName,inputPassword);
-                    if(!isValid){
-                        counter--;
-                        Toast.makeText( MainActivity.this , "Incorrect credentials entered!",Toast.LENGTH_SHORT).show();
-
-                        eAttemptsInfo.setText("No. of attempts remaining: " + counter);
-
-                        if(counter ==0) {
-                            eLogin.setEnabled(false);
-                        }
-
-                    }else{
-                        Toast.makeText( MainActivity.this , "Login successful!",Toast.LENGTH_SHORT).show();
-                        //Add the code to go to new Activity
-                        Intent intent= new Intent(MainActivity.this,HomePageActivity.class);
-                        startActivity(intent);
-                    }
-
-
-
-                }
-
-            }
-        });
     }
 
-    private boolean validate(String name,String password){
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+        String text =parent.getItemAtPosition(position).toString();
 
-        if (name.equals(Username) && password.equals(Password)) {
-            return true;
-        }
-        return false;
+
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
+
     }
 }
