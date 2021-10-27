@@ -25,7 +25,7 @@ public class CashSendActivity extends AppCompatActivity {
         inputPin=findViewById(R.id.etPin);
 
         eSend=findViewById(R.id.btnSend);
-        Back=findViewById(R.id.Back);
+        Back=findViewById(R.id.etBack);
 
        Back.setOnClickListener(new View.OnClickListener() {
 

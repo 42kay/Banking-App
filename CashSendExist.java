@@ -12,6 +12,7 @@ public class CashSendExist extends AppCompatActivity {
 
     TextView eSend;
     private EditText inputCode,inputRand;
+    TextView etBack;
 
 
     @Override
@@ -25,7 +26,16 @@ public class CashSendExist extends AppCompatActivity {
 
         eSend=findViewById(R.id.btnSend3);
 
+        etBack=findViewById(R.id.etBack);
 
+        etBack.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(CashSendExist.this,CashSendMainActivity.class));
+
+            }
+        });
 
 //        checkCredentials();
 
@@ -74,5 +84,3 @@ public class CashSendExist extends AppCompatActivity {
     }
 }
 
-    }
-}

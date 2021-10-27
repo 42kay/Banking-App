@@ -22,7 +22,7 @@
             app:layout_constraintHorizontal_bias="0.496"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.433" />
+            app:layout_constraintVertical_bias="0.316" />
 
         <Button
             android:id="@+id/eMosima"
@@ -35,20 +35,20 @@
             app:layout_constraintHorizontal_bias="0.496"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.583" />
+            app:layout_constraintVertical_bias="0.467" />
 
         <Button
             android:id="@+id/eMe"
             android:layout_width="260dp"
             android:layout_height="51dp"
             android:backgroundTint="#FD9727"
-            android:text="Me"
+            android:text="Kwezi"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.496"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.308" />
+            app:layout_constraintVertical_bias="0.616" />
 
         <Button
             android:id="@+id/eNew"
@@ -73,18 +73,25 @@
             android:textColor="#FD9727"
             android:textSize="27sp"
             android:textStyle="bold"
-            tools:layout_editor_absoluteX="47dp"
-            tools:layout_editor_absoluteY="59dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.146" />
 
         <TextView
-            android:id="@+id/etBack"
+            android:id="@+id/eBack"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Back"
             android:textColor="#131313"
             android:textSize="16sp"
-            tools:layout_editor_absoluteX="32dp"
-            tools:layout_editor_absoluteY="674dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.079"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.947" />
 
     </android.support.constraint.ConstraintLayout>
 
