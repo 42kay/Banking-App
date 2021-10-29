@@ -28,7 +28,7 @@ public class NewRecipientActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(NewRecipientActivity.this,BuyAirtimeMainActivity.class));
+                startActivity(new Intent(NewRecipientActivity.this,MainActivity.class));
 
             }
         });
@@ -37,7 +37,7 @@ public class NewRecipientActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(NewRecipientActivity.this, BuyAirtimeExistingActivity2.class));
+                startActivity(new Intent(NewRecipientActivity.this, BuyAirtime_Exist.class));
                 checkCredentials();
 
 

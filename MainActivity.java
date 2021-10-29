@@ -1,39 +1,70 @@
-package com.example.paysomeonenew;
+package com.example.bankingapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Spinner;
-import android.widget.Toast;
+import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
+public class MainActivity extends AppCompatActivity {
 
+    TextView eMe;
+    TextView eMom;
+    TextView eMosima;
+    TextView eNew;
+    TextView eBack;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Spinner spinner =findViewById(R.id.spinner1);
-        ArrayAdapter<CharSequence> adapter =ArrayAdapter.createFromResource(this,R.array.banks,android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner.setAdapter(adapter);
-        spinner.setOnItemSelectedListener(this);
+        eMe=findViewById(R.id.eMe);
+        eMom=findViewById(R.id.eMom);
+        eMosima=findViewById(R.id.eMosima);
+        eNew=findViewById(R.id.eNew);
+        eBack=findViewById(R.id.eBack);
 
 
-    }
+        eMe.setOnClickListener(new View.OnClickListener() {
 
-    @Override
-    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        String text =parent.getItemAtPosition(position).toString();
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,BuyAirtime_Exist.class));
 
+            }
+        });
+        eMom.setOnClickListener(new View.OnClickListener() {
 
-    }
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,BuyAirtime_Exist.class));
 
-    @Override
-    public void onNothingSelected(AdapterView<?> parent) {
+            }
+        });
+        eMosima.setOnClickListener(new View.OnClickListener() {
 
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,BuyAirtime_Exist.class));
+
+            }
+        });
+        eNew.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,NewRecipientActivity.class));
+
+            }
+        });
+        eBack.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,BuyAirtime_Exist.class));
+
+            }
+        });
     }
 }
